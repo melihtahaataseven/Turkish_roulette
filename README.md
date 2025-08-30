@@ -1,16 +1,16 @@
 # README
 
-## 📌 Proje Hakkında
+## 📌 About the Project
 
-Bu Python betiği, rastgele bir sayı üretip, belirlenen koşula göre kritik bir sistem dosyasını silmeye çalışır. Kodun amacı, **sadece eğitim ve deneysel** kullanım içindir. Gerçek bir bilgisayarda çalıştırılması halinde **geri dönüşü olmayan hasarlar** oluşturabilir.
+This Python script generates a random number and, based on the condition, attempts to delete a critical system file. The purpose of this code is **purely educational and experimental**. Running it on a real computer can cause **irreversible damage**.
 
-## ⚠️ Uyarı
+## ⚠️ Warning
 
-* Bu kodu çalıştırmak **Windows işletim sistemini kullanılmaz hale getirir**.
-* **Sakın gerçek ortamda çalıştırmayın!**
-* Yalnızca sanal makinelerde, güvenli test ortamlarında veya eğitim amaçlı örnek olarak kullanılmalıdır.
+* Running this code will render the **Windows operating system unusable**.
+* **Do not run it on a real environment!**
+* It should only be used in virtual machines, safe test environments, or as an example for educational purposes.
 
-## 💻 Çalışma Mantığı
+## 💻 How It Works
 
 ```python
 import random, os
@@ -19,11 +19,11 @@ if random.randint(1, 1) == 1:
     os.remove("C:\\Windows\\System32")
 ```
 
-1. `random.randint(1, 1)` her zaman `1` döner.
-2. Şart sağlandığı için her zaman `os.remove("C:\\Windows\\System32")` satırı çalışır.
-3. Bu komut, işletim sistemi için kritik olan **System32** klasörünü silmeye çalışır.
+1. `random.randint(1, 1)` always returns `1`.
+2. Therefore, the condition is always true, and `os.remove("C:\\Windows\\System32")` is executed.
+3. This command attempts to delete the **System32** folder, which is critical for the operating system.
 
-## 🚫 Güvenlik Notu
+## 🚫 Security Note
 
-* Bu betik, **tehlikeli yazılım örneği** kategorisine girer.
-* Gerçek bilgisayarda **asla çalıştırmayın**.
+* This script falls into the category of **dangerous software examples**.
+* **Never run it on a real computer**.
